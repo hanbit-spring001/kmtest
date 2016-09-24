@@ -3,7 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="firstBean" class="com.hanbit.spring.FirstBean"></bean> <!-- xml config로 -->
-	<!-- <bean id="secondBean" class="com.hanbit.spring.SecondBean"></bean> -->
+	<bean id="firstBean" class="com.hanbit.spring.FirstBean">
+		<property name="secondBean" ref="secondBean" />	<!-- firstBean에 있는 속성명, 스프링 컨테이너 안에 있는 id  --><!-- DI -->
+	</bean>
+	
+	<bean id="secondBean" class="com.hanbit.spring.SecondBean"></bean>
 
 </beans>
