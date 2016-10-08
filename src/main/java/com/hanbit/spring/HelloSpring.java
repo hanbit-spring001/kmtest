@@ -16,6 +16,7 @@ public class HelloSpring {
 		*/
 		
 		// applicationContext-core.xml을 참고함
+		// 컨테이너를 만듦
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/applicationContext-core.xml");
 		
 		FirstBean springBean = applicationContext.getBean(FirstBean.class);	
